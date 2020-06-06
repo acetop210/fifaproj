@@ -7,5 +7,5 @@ function setup() {
 
 function draw() {
   background(255);
-  println(sppo);
+  text("Hello world",20,20);
 }
