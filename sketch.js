@@ -7,5 +7,7 @@ function setup() {
 
 function draw() {
   background(255);
+  fill(0);
   text("Hello world",20,20);
+  rect(100,100,30,30);
 }
