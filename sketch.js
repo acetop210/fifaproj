@@ -2,7 +2,7 @@ let apikey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiMzAyNDcxM
 let sppo, spid;
 
 function preload(){
-  sppo = loadJSON("../jsons/spposition.json");
+  sppo = loadJSON("fifaproj/jsons/spposition.json");
   spid = loadJSON("https://static.api.nexon.co.kr/fifaonline4/latest/spid.json");
 }
 
