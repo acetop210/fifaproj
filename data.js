@@ -1,14 +1,16 @@
-let spid, sppo, div;
+let spid, sppo, div, sea;
 var pdict={};
 let apikey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiMzAyNDcxMzk4IiwiYXV0aF9pZCI6IjIiLCJ0b2tlbl90eXBlIjoiQWNjZXNzVG9rZW4iLCJzZXJ2aWNlX2lkIjoiNDMwMDExNDgxIiwiWC1BcHAtUmF0ZS1MaW1pdCI6IjIwMDAwOjEwIiwibmJmIjoxNTkxNDQzNzEzLCJleHAiOjE2NTQ1MTU3MTMsImlhdCI6MTU5MTQ0MzcxM30.3udmK-WR4ohpfNL4tVLcN9swQE7b74tOUtMy63k1ZqQ";
 var spid_dict = new p5.TypedDict();
 var sppo_dict = new p5.TypedDict();
 var div_dict = {};
+var sea_dict = {};
 let imgDict = {};
 userURL = 'https://api.nexon.co.kr/fifaonline4/v1.0/users?nickname='
 var myID="";
 let matchURL1 = "https://api.nexon.co.kr/fifaonline4/v1.0/users/" //+accessid
-let matchURL2 = "/matches?matchtype=50&offset=0&limit=10"
+let matchURL2 = "/matches?matchtype=";
+let matchURL3 = "&offset=0&limit=10";
 let matchList;
 let playerList = {};
 let playerL1 = {};
@@ -34,6 +36,7 @@ function basedata(){
   spid = loadJSON("spid.json",'json');
   sppo = loadJSON("spposition.json",'json');
   div = loadJSON("division.json",'json');
+  sea = loadJSON("sea.json",'json');
 }
 
 function dictMake(){
@@ -45,6 +48,9 @@ function dictMake(){
   }
   for(var i=0; div[i]; i++){
     div_dict[div[i].divisionId] = div[i].divisionName;
+  }
+  for(let i=0; sea[i]; i++){
+    sea_dict[sea[i].seasonId] = [sea[i].className, sea[i].seasonImg];
   }
 }
 
@@ -87,15 +93,15 @@ function getUserID(name, type){
           userinfo = JSON.parse(userinfo);
           accessid = userinfo.accessId;
         }
-        else accessid = "ㅓ";
+        else accessid = "";
       }
     );
   }
 }
 
-function getmyMatch(myID, type){
+function getmyMatch(myID, type, game){
   httpDo(
-    matchURL1+myID+matchURL2,
+    matchURL1+myID+matchURL2+game+matchURL3,
     {
       method: 'GET',
       // Other Request options, like special headers for apis

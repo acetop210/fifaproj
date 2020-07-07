@@ -43,7 +43,7 @@ function logf1(){
         txt1.hide();
         console.log(myID);
         islogin = true;
-        getmyMatch(myID, 1);
+        getmyMatch(myID, 1, "50");
         setTimeout(function () {
           makePlayer();
           console.log(gkList);
@@ -78,11 +78,17 @@ function logf2(){
 function click6(){
   if(dis==1){
     let username = input.value();
-    if(username != busername){
+    let msel = matchsel.value();;
+    let mnum;
+    if(username != busername || msel != bmsel){
       busername = username;
+      bmsel = msel;
+      if(msel=="공식경기") mnum = "50";
+      else mnum = "52";
+      accessid="";
       getUserID(username, 2);
       setTimeout(function () {
-        if(accessid=="ㅓ"){
+        if(accessid==""){
             console.log("fail");
             fill(0);
             txt1.show();
@@ -91,7 +97,7 @@ function click6(){
           else{
             txt1.hide();
             console.log(accessid);
-            getmyMatch(accessid, 2);
+            getmyMatch(accessid, 2, mnum);
             setTimeout(function () {
               console.log(us_matchList);
               getUserInfo(accessid);

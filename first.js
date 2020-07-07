@@ -74,7 +74,7 @@ function btnhide(){
 }
 
 function chbutton1(){
-  if(table != undefined){
+  if(table != undefined && table.enemyL.length>5){
     if(table.page==0) table.page=1;
   }
 }
@@ -90,8 +90,18 @@ function draw1(){
   input.position(540 + 2*button1.width,150);
   button6.position(540 + 2*button1.width+input.width+10,165);
   matchsel.position(300,150);
+  console.log(matchsel.value(), bmsel);
+  if(matchsel.value() != bmsel) click6();
   button6.mousePressed(click6);
   if(table != undefined){
+    stroke(3);
+    textSize(20);
+    image(ball_img,80,200,100,100);
+    textAlign(CENTER);
+    text(userdiv, 130,170);
+    textAlign(LEFT);
+    textSize(12);
+    stroke(1);
     nextButton.mousePressed(chbutton1);
     befButton.mousePressed(chbutton2);
     btnshow();

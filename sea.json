@@ -1,0 +1,162 @@
+[
+	{
+		"seasonId": 101,
+		"className": "ICON",
+		"seasonImg": "http://s.nx.com/s2/game/fo4/obt/externalAssets/season/icon.png"
+	},
+	{
+		"seasonId": 201,
+		"className": "NHD",
+		"seasonImg": "http://s.nx.com/s2/game/fo4/obt/externalAssets/season/nhd.png"
+	},
+	{
+		"seasonId": 202,
+		"className": "TKI",
+		"seasonImg": "http://s.nx.com/s2/game/fo4/obt/externalAssets/season/tki.png"
+	},
+	{
+		"seasonId": 206,
+		"className": "TB",
+		"seasonImg": "http://s.nx.com/s2/game/fo4/obt/externalAssets/season/tb.png"
+	},
+	{
+		"seasonId": 207,
+		"className": "TT",
+		"seasonImg": "http://s.nx.com/s2/game/fo4/obt/externalAssets/season/tt.png"
+	},
+	{
+		"seasonId": 210,
+		"className": "GR",
+		"seasonImg": "http://s.nx.com/s2/game/fo4/obt/externalAssets/season/gr.png"
+	},
+	{
+		"seasonId": 211,
+		"className": "19 TOTY",
+		"seasonImg": "http://s.nx.com/s2/game/fo4/obt/externalAssets/season/19toty.png"
+	},
+	{
+		"seasonId": 212,
+		"className": "18 TOTY",
+		"seasonImg": "http://s.nx.com/s2/game/fo4/obt/externalAssets/season/18toty.png"
+	},
+	{
+		"seasonId": 213,
+		"className": "MC ICON",
+		"seasonImg": "http://s.nx.com/s2/game/fo4/obt/externalAssets/season/mcicon.png"
+	},
+	{
+		"seasonId": 214,
+		"className": "TC",
+		"seasonImg": "http://s.nx.com/s2/game/fo4/obt/externalAssets/season/tc.png"
+	},
+	{
+		"seasonId": 215,
+		"className": "19 TOTS",
+		"seasonImg": "http://s.nx.com/s2/game/fo4/obt/externalAssets/season/19tots.png"
+	},
+	{
+		"seasonId": 216,
+		"className": "HOT",
+		"seasonImg": "http://s.nx.com/s2/game/fo4/obt/externalAssets/season/hot.png"
+	},
+	{
+		"seasonId": 217,
+		"className": "COC",
+		"seasonImg": "http://s.nx.com/s2/game/fo4/obt/externalAssets/season/coc.png"
+	},
+	{
+		"seasonId": 218,
+		"className": "OTW",
+		"seasonImg": "http://s.nx.com/s2/game/fo4/obt/externalAssets/season/otw.png"
+	},
+	{
+		"seasonId": 219,
+		"className": "NG",
+		"seasonImg": "http://s.nx.com/s2/game/fo4/obt/externalAssets/season/ng.png"
+	},
+	{
+		"seasonId": 220,
+		"className": "20 TOTY",
+		"seasonImg": "http://s.nx.com/s2/game/fo4/obt/externalAssets/season/20toty.png"
+	},
+	{
+		"seasonId": 221,
+		"className": "19 UCL",
+		"seasonImg": "http://s.nx.com/s2/game/fo4/obt/externalAssets/season/19ucl.png"
+	},
+	{
+		"seasonId": 222,
+		"className": "20 TOTN",
+		"seasonImg": "http://s.nx.com/s2/game/fo4/obt/externalAssets/season/20totn.png"
+	},
+	{
+		"seasonId": 225,
+		"className": "TKL",
+		"seasonImg": "http://s.nx.com/s2/game/fo4/obt/externalAssets/season/tkl.png"
+	},
+	{
+		"seasonId": 230,
+		"className": "20 TOTS",
+		"seasonImg": "http://s.nx.com/s2/game/fo4/obt/externalAssets/season/20tots.png"
+	},
+	{
+		"seasonId": 234,
+		"className": "LH",
+		"seasonImg": "http://s.nx.com/s2/game/fo4/obt/externalAssets/season/lh.png"
+	},
+	{
+		"seasonId": 295,
+		"className": "19 KFA",
+		"seasonImg": "http://s.nx.com/s2/game/fo4/obt/externalAssets/season/2019kfa.png"
+	},
+	{
+		"seasonId": 297,
+		"className": "MCFC",
+		"seasonImg": "http://s.nx.com/s2/game/fo4/obt/externalAssets/season/mcfc.png"
+	},
+	{
+		"seasonId": 298,
+		"className": "18 KFA",
+		"seasonImg": "http://s.nx.com/s2/game/fo4/obt/externalAssets/season/kfa.png"
+	},
+	{
+		"seasonId": 300,
+		"className": "19 LIVE",
+		"seasonImg": "http://s.nx.com/s2/game/fo4/obt/externalAssets/season/live.png"
+	},
+	{
+		"seasonId": 317,
+		"className": "17 LIVE",
+		"seasonImg": "http://s.nx.com/s2/game/fo4/obt/externalAssets/season/17.png"
+	},
+	{
+		"seasonId": 318,
+		"className": "18 LIVE",
+		"seasonImg": "http://s.nx.com/s2/game/fo4/obt/externalAssets/season/18.png"
+	},
+	{
+		"seasonId": 500,
+		"className": "18 PLC–A",
+		"seasonImg": "http://s.nx.com/s2/game/fo4/obt/externalAssets/season/plc.png"
+	},
+	{
+		"seasonId": 501,
+		"className": "18 PLC–S",
+		"seasonImg": "http://s.nx.com/s2/game/fo4/obt/externalAssets/season/18pls.png"
+	},
+	{
+		"seasonId": 502,
+		"className": "19 PLC–A",
+		"seasonImg": "http://s.nx.com/s2/game/fo4/obt/externalAssets/season/19pla.png"
+	},
+	{
+		"seasonId": 503,
+		"className": "19 PLC–S",
+		"seasonImg": "http://s.nx.com/s2/game/fo4/obt/externalAssets/season/19pls.png"
+	},
+	{
+		"seasonId": 504,
+		"className": "20KLeague",
+		"seasonImg": "http://s.nx.com/s2/game/fo4/obt/externalAssets/season/20kl.png"
+	}
+]

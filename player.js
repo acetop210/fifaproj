@@ -1,11 +1,12 @@
 class Player {
   constructor(spid, sppo, status, num) {
+    this.seaL = sea_dict[Math.floor(spid/1000000)];
     this.name = spid_dict.get(spid);
     this.ppo = sppo_dict.get(sppo);
     this.status = status;
     this.pos = 1000+num*100;
     this.num = num;
-    //console.log(this.num);
+    this.sea = this.seaL[0];
    }
 
   mouseOn(){

@@ -50,6 +50,13 @@ class Table{
        let foul = this.foulL[i+5*this.page];
        let yellow = this.yellowL[i+5*this.page];
        let red = this.redL[i+5*this.page];
+       let rectcol;
+       //color(13,173,242,70)
+       if(result == "승") rectcol = color(0,255,128,70);
+       else rectcol = color(253,46,2,70);
+       fill(rectcol);
+       rect(280,270+81*i+2,1000,80);
+       fill(0);
        list.push(result);
        list.push(possetion);
        list.push(foul);

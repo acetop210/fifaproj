@@ -1,6 +1,6 @@
 function drawGuide(shootmx,assistmx,gmx,dribblemx,ptmx,psmx,bmx,tmx){
   //circle
-  translate(1000,425);
+  translate(920,425);
   stroke(0);
   noFill();
   for(let i=1; i<6; i++) circle(0,0,90*i);
@@ -64,7 +64,7 @@ function drawGuide(shootmx,assistmx,gmx,dribblemx,ptmx,psmx,bmx,tmx){
     }
     pop();
   }
-  translate(-1000,-425);
+  translate(-920,-425);
 }
 
 function drawGraph(player){
@@ -111,10 +111,11 @@ function grplot(shootmx,assistmx,gmx,dribblemx,ptmx,psmx,bmx,tmx,player,fillcol,
   rect(1470,190+50*num,50,20);
   stroke(150);
   text(player.name, 1350, 205+50*num);
+  text(player.sea, 1300, 205+50*num);
   stroke(0);
   if(!ism || (ism&&isp)){
     let k = 8;
-    translate(1000,425);
+    translate(920,425);
     beginShape();
     fill(fillcol);
     for(let j=0; j<k; j++){
@@ -139,13 +140,14 @@ function grplot(shootmx,assistmx,gmx,dribblemx,ptmx,psmx,bmx,tmx,player,fillcol,
       pop();
     }
     endShape(CLOSE);
-    translate(-1000,-425);
+    translate(-920,-425);
   }
   if(num2==playerL.length-1){
     image(trophyimg,100,270,400,400);
     textAlign(CENTER);
     text(plmax.name, 300,637);
     textSize(18);
+    fill(0);
     text(Math.round(plmax.status.spRating*10)/10, 300,265);
     textSize(12);
     textAlign(LEFT);

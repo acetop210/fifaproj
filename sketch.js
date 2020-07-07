@@ -8,6 +8,7 @@ let img;
 let playerSel;
 let fillcolList;
 let busername;
+let bmsel = '공식경기';
 function setup() {
   textFont('Georgia');
   fillcolList = [color(255,0,0,96), color(0,255,0,96), color(0,0,255,96), color(225,0,128,96), color(0,64,64,96), color(64,0,64,96), color(128,128,0,96), color(0,255,55,96),color(255,0,255,96),color(128,0,64,96)];
@@ -53,7 +54,7 @@ function setup() {
   img = loadImage("logo.png");
   no_img = loadImage("noimage.png");
   trophyimg = loadImage("trophy.png");
-  busername = ""
+  ball_img = loadImage("soccerball.png");
 }
 
 function draw() {
