@@ -80,14 +80,14 @@ function drawGraph(player){
   let plmax = player[0];
   for(let i=0; player[i]; i++){
     let ps = player[i].status;
-    if(shootmx < ps.shoot) shootmx = ps.shoot;
-    if(assistmx < ps.assist) assistmx = ps.assist;
-    if(gmx < ps.goal) gmx = ps.goal;
-    if(dribblemx < ps.dribble) dribblemx = ps.dribble;
-    if(ptmx < ps.passTry) ptmx = ps.passTry;
-    if(psmx < ps.passSuccess) psmx = ps.passSuccess;
-    if(bmx < ps.block) bmx = ps.block;
-    if(tmx < ps.tackle) tmx = ps.tackle;
+    if(shootmx < ps.shoot) shootmx = Math.ceil(ps.shoot);
+    if(assistmx < ps.assist) assistmx = Math.ceil(ps.assist);
+    if(gmx < ps.goal) gmx = Math.ceil(ps.goal);
+    if(dribblemx < ps.dribble) dribblemx = Math.ceil(ps.dribble);
+    if(ptmx < ps.passTry) ptmx = Math.ceil(ps.passTry);
+    if(psmx < ps.passSuccess) psmx = Math.ceil(ps.passSuccess);
+    if(bmx < ps.block) bmx = Math.ceil(ps.block);
+    if(tmx < ps.tackle) tmx = Math.ceil(ps.tackle);
   }
   drawGuide(shootmx,assistmx,gmx,dribblemx,ptmx,psmx,bmx,tmx);
   let ismouse = false;

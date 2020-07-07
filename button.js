@@ -137,3 +137,7 @@ function click6(){
     }
   }
 }
+
+// function keyPressed(){
+//   if()
+// }

@@ -133,6 +133,7 @@ function draw1(){
 }
 
 function draw2(){
+  txt1.hide();
   playerSel.show();
   playerSel.position(100,150);
   if(playerSel.value()=="GK") drawGraph(gkList);
@@ -143,6 +144,7 @@ function draw2(){
 }
 
 function draw3(){
+  txt1.hide();
   buybtn.mousePressed(dchbutton1);
   sellbtn.mousePressed(dchbutton2);
   console.log(dealtable);
