@@ -27,7 +27,9 @@ let subList=[];
 let us_matchList=[];
 let userdiv;
 let table;
-
+let buyList = {};
+let sellList = {};
+let dealtable = {};
 function preload(){
   basedata();
 }
@@ -438,4 +440,30 @@ function getuserMatch(){
   }
   console.log(result);
   table = new Table(enemy, result, possession, foul, yellow, red);
+}
+
+function getDeal(id){
+  httpDo(
+    "https://api.nexon.co.kr/fifaonline4/v1.0/users/"+id+"/markets?tradetype=buy&offset=0&limit=5",
+    {
+      method: 'GET',
+      datatype: "json",
+      headers: { Authorization: apikey}
+    },
+    function(res) {
+      buyList = JSON.parse(res);
+    }
+  );
+
+  httpDo(
+    "https://api.nexon.co.kr/fifaonline4/v1.0/users/"+id+"/markets?tradetype=sell&offset=0&limit=5",
+    {
+      method: 'GET',
+      datatype: "json",
+      headers: { Authorization: apikey}
+    },
+    function(res) {
+      sellList = JSON.parse(res);
+    }
+  );
 }

@@ -9,6 +9,8 @@ let playerSel;
 let fillcolList;
 let busername;
 let bmsel = '공식경기';
+let buybtn;
+let sellbtn;
 function setup() {
   textFont('Georgia');
   fillcolList = [color(255,0,0,96), color(0,255,0,96), color(0,0,255,96), color(225,0,128,96), color(0,64,64,96), color(64,0,64,96), color(128,128,0,96), color(0,255,55,96),color(255,0,255,96),color(128,0,64,96)];
@@ -17,13 +19,15 @@ function setup() {
   input = createInput();
   input.size(500,50);
   loginput = createInput();
+  buybtn = createButton('구매');
+  sellbtn = createButton('판매');
   loginbutton = createButton('LOG IN');
   logoutbutton = createButton('LOG OUT');
   nextButton = createButton('다음');
   befButton = createButton('이전');
   button1 = createButton('유저검색');
   button2 = createButton('선수비교');
-  button3 = createButton('전술비교');
+  button3 = createButton('거래기록');
   button4 = createButton('선수검색');
   button5 = createButton('스쿼드메이커');
   button6 = createButton('검색');
@@ -63,4 +67,5 @@ function draw() {
   if(dis==0) draw0();
   if(dis==1) draw1();
   if(dis==2) draw2();
+  if(dis==3) draw3();
 }

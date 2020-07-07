@@ -10,7 +10,7 @@ function click2(){
 }
 
 function click3(){
-  dis=3;
+  if(dealtable != undefined && islogin == true) dis=3;
   console.log(dis);
 }
 
@@ -51,6 +51,32 @@ function logf1(){
             makepList();
           },2500);
         },2000);
+
+        getDeal(myID);
+        setTimeout(function (){
+          console.log(buyList, sellList);
+          let dateL = [];
+          let spidL = [];
+          let gradeL = [];
+          let priceL = [];
+          for(let i=0; buyList[i]; i++){
+            let bL = buyList[i];
+            console.log(bL);
+            let sL = sellList[i];
+            dateL.push(bL.tradeDate);
+            spidL.push(bL.spid);
+            gradeL.push(bL.grade);
+            priceL.push(bL.value);
+          }
+          for(let i=0; sellList[i]; i++){
+            let sL = sellList[i];
+            dateL.push(sL.tradeDate);
+            spidL.push(sL.spid);
+            gradeL.push(sL.grade);
+            priceL.push(sL.value);
+          }
+          dealtable = new dealTable(dateL, spidL, gradeL, priceL);
+        },1000);
       }
   },1500);
 }

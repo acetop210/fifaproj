@@ -111,7 +111,7 @@ function grplot(shootmx,assistmx,gmx,dribblemx,ptmx,psmx,bmx,tmx,player,fillcol,
   rect(1470,190+50*num,50,20);
   stroke(150);
   text(player.name, 1350, 205+50*num);
-  text(player.sea, 1300, 205+50*num);
+  text(player.sea, 1280, 205+50*num);
   stroke(0);
   if(!ism || (ism&&isp)){
     let k = 8;

@@ -14,6 +14,7 @@ function drawBase(){
   login();
   hideSearch();
   btnhide();
+  dbtnhide();
   playerSel.hide();
 }
 
@@ -63,6 +64,16 @@ function draw0(){
   image(img, 385,150,385*2,215*2+150);
 }
 
+function dbtnshow(){
+  buybtn.show();
+  sellbtn.show();
+}
+
+function dbtnhide(){
+  buybtn.hide();
+  sellbtn.hide();
+}
+
 function btnshow(){
   nextButton.show();
   befButton.show();
@@ -82,6 +93,18 @@ function chbutton1(){
 function chbutton2(){
   if(table != undefined){
     if(table.page == 1) table.page=0;
+  }
+}
+
+function dchbutton1(){
+  if(dealtable != undefined && dealtable.spidL.length>5){
+    if(dealtable.page==1) dealtable.page=0;
+  }
+}
+
+function dchbutton2(){
+  if(dealtable != undefined){
+    if(dealtable.page == 0) dealtable.page=1;
   }
 }
 
@@ -117,4 +140,17 @@ function draw2(){
   if(playerSel.value()=="MF") drawGraph(mfList);
   if(playerSel.value()=="FW") drawGraph(fwList);
   if(playerSel.value()=="SUB") drawGraph(subList);
+}
+
+function draw3(){
+  buybtn.mousePressed(dchbutton1);
+  sellbtn.mousePressed(dchbutton2);
+  console.log(dealtable);
+  try{
+    dealtable.draw();
+  }
+  catch(e){
+    console.log("error");
+  }
+  dbtnshow();
 }
