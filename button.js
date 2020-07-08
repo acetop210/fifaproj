@@ -50,7 +50,7 @@ function logf1(){
           setTimeout(function () {
             makepList();
           },2500);
-        },2000);
+        },1500);
 
         getDeal(myID);
         setTimeout(function (){
@@ -83,7 +83,7 @@ function logf1(){
 
 function logf2(){
   islogin = false;
-  if(dis==2) dis=0;
+  if(dis==2 || dis==3) dis=0;
   myID = "";
   matchList = [];
   playerList = {};
@@ -130,10 +130,10 @@ function click6(){
               getuserMatch();
               setTimeout(function(){
                 console.log(userdiv);
-              },1000);
-            },1000);
+              },1500);
+            },1700);
           }
-      },1000);
+      },2000);
     }
   }
 }

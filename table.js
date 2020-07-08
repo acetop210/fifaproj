@@ -50,11 +50,11 @@ class Table{
        let foul = this.foulL[i+5*this.page];
        let yellow = this.yellowL[i+5*this.page];
        let red = this.redL[i+5*this.page];
-       let rectcol;
+       let rectcol = 255;
        //color(13,173,242,70)
        if(result == "승") rectcol = color(0,255,128,70);
        else if(result == "무") rectcol = color(0,0,0,70);
-       else rectcol = color(253,46,2,70);
+       else if (result == "패") rectcol = color(253,46,2,70);
        fill(rectcol);
        rect(280,270+81*i+2,1000,80);
        fill(0);
@@ -146,4 +146,30 @@ class dealTable{
      this.drawbutton();
      this.drawInfo();
    }
+}
+
+class divTable{
+  constructor(div){
+    this.div = div;
+  }
+
+  draw_table(){
+    noFill();
+    rect(50,150,200,540);
+    for(let i=1; i<15; i++){
+      line(50,150+i*36,250, 150+i*36);
+    }
+    let i=1;
+    let fillcol;
+    for(var key in div_dict){
+      if(this.div == key){
+        fill(0,0,240,50);
+        rect(50,150+(i-1)*36,200,36);
+      }
+      textAlign(CENTER);
+      fill(0);
+      text(div_dict[key], 150, 150+i*36-18);
+      i+=1;
+    }
+  }
 }

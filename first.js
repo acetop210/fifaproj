@@ -4,11 +4,11 @@ function drawBase(){
   rect(0,750,windowWidth,windowHeight-750);
   logo.position(30,15);
   logo2.position(550,770);
-  button1.position(540,60);
-  button2.position(540+button1.width,60);
-  button3.position(540+2*button1.width,60);
-  button4.position(540+3*button1.width,60);
-  button5.position(540+4*button1.width,60);
+  button1.position(670,60);
+  button2.position(670+button1.width,60);
+  button3.position(670+2*button1.width,60);
+  //button4.position(540+3*button1.width,60);
+  //button5.position(540+4*button1.width,60);
   setButton();
 //  homebutton.position(270,42);
   login();
@@ -25,10 +25,10 @@ function setButton(){
   else button2.style('background-color',color(153,217,234));
   if(dis==3) button3.style('background-color',color(164,190,223));
   else button3.style('background-color',color(153,217,234));
-  if(dis==4) button4.style('background-color',color(164,190,223));
-  else button4.style('background-color',color(153,217,234));
-  if(dis==5) button5.style('background-color',color(164,190,223));
-  else button5.style('background-color',color(153,217,234));
+  // if(dis==4) button4.style('background-color',color(164,190,223));
+  // else button4.style('background-color',color(153,217,234));
+  // if(dis==5) button5.style('background-color',color(164,190,223));
+  // else button5.style('background-color',color(153,217,234));
 }
 
 function login(){
@@ -61,6 +61,7 @@ function hideSearch(){
 }
 
 function draw0(){
+  txt1.hide();
   image(img, 385,150,385*2,215*2+150);
 }
 
@@ -113,22 +114,14 @@ function draw1(){
   input.position(540 + 2*button1.width,150);
   button6.position(540 + 2*button1.width+input.width+10,165);
   matchsel.position(300,150);
-  console.log(matchsel.value(), bmsel);
-  if(matchsel.value() != bmsel) click6();
   button6.mousePressed(click6);
-  if(table != undefined){
-    stroke(3);
-    textSize(20);
-    image(ball_img,80,200,100,100);
-    textAlign(CENTER);
-    text(userdiv, 130,170);
-    textAlign(LEFT);
-    textSize(12);
-    stroke(1);
+  if(matchsel.value() != bmsel) click6();
+  if(table != undefined && divtable != undefined){
     nextButton.mousePressed(chbutton1);
     befButton.mousePressed(chbutton2);
     btnshow();
     table.draw();
+    divtable.draw_table();
   }
 }
 
