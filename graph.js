@@ -144,11 +144,11 @@ function grplot(shootmx,assistmx,gmx,dribblemx,ptmx,psmx,bmx,tmx,player,fillcol,
   }
   if(num2==playerL.length-1){
     image(trophyimg,100,270,400,400);
-    textAlign(CENTER);
+    textAlign(CENTER,CENTER);
     text(plmax.name, 300,637);
     textSize(18);
     fill(0);
-    text(Math.round(plmax.status.spRating*10)/10, 300,265);
+    text(Math.round(plmax.status.spRating*10)/10, 300,260);
     textSize(12);
     textAlign(LEFT);
   }

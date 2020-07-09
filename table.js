@@ -89,19 +89,20 @@ class dealTable{
     this.valL = val;
     this.txtL = ["날짜", "시즌", "선수", "강화등급", "가격"];
     this.page = 0;
+    this.colorL = [color(255,0,0,96), color(0,255,0,96), color(0,0,255,96), color(225,0,128,96), color(0,64,64,96)];
   }
 
   drawline(){
     fill(0);
-    rect(280,220,1000,10);
+    rect(100,220,1000,10);
     for(let i=0; i<6; i++){
-      rect(280,270+81*i,200,1);
-      textAlign(CENTER);
+      rect(100,270+81*i,200,1);
+      textAlign(CENTER,CENTER);
       textSize(16);
-      text(this.txtL[0],380,255);
+      text(this.txtL[0],200,255);
       for(let j=0; j<4; j++){
-        text(this.txtL[j+1],484+200*j+98,255);
-        rect(484+200*j,270+81*i,196,1);
+        text(this.txtL[j+1],304+200*j+98,255);
+        rect(304+200*j,270+81*i,196,1);
       }
       textSize(12);
     textAlign(LEFT);
@@ -109,12 +110,12 @@ class dealTable{
    }
 
    drawbutton(){
-     buybtn.position(280, 190);
-     sellbtn.position(330,190);
+     buybtn.position(100, 190);
+     sellbtn.position(150,190);
    }
 
    drawInfo(){
-     textAlign(CENTER);
+     textAlign(CENTER,CENTER);
      textSize(16);
      strokeWeight(0);
      for(let i=0; i<5; i++){
@@ -130,10 +131,10 @@ class dealTable{
        list.push(name);
        list.push(grade);
        list.push(val);
-       text(date, 380, 270+81*(i+1)-40.5);
+       text(date, 200, 270+81*(i+1)-40.5);
        //console.log(enemy);
        for(let j=0; j<4; j++){
-         text(list[j], 484+200*j+88,270+81*(i+1)-40.5);
+         text(list[j], 304+200*j+88,270+81*(i+1)-40.5);
        }
      }
      textSize(12);
@@ -141,10 +142,51 @@ class dealTable{
      strokeWeight(1);
    }
 
+   drawgraph(){
+     let ox = 1250;
+     let oy = 550;
+     let cx = 370;
+     let cy = 1120;
+     let si = 21;
+     let maxval = 0;
+     fill(0);
+     line(ox, oy-230, ox, oy);
+     line(ox, oy, ox+231, oy);
+     circle(cx,cy,100);
+     for(let i=0; i<5; i++){
+       let val = this.valL[i+5*this.page];
+       if(maxval < val) maxval = val;
+     }
+     textAlign(CENTER,BOTTOM);
+     text('가격' ,ox, oy-230);
+     textAlign(LEFT,BOTTOM);
+     text('선수', ox+231, oy-3);
+     for(let i=0; i<5; i++){
+       let spid = this.spidL[i+5*this.page];
+       let sea = sea_dict[Math.floor(spid/1000000)][0];
+       let name = spid_dict.get(spid);
+       let val = this.valL[i+5*this.page];
+       if(ox+si*(2*i+1)<=mouseX && mouseX<=ox+si*(2*i+1)+si && oy-val/maxval*220<=mouseY && mouseY<=oy){
+         let leng = str(val)
+         leng = textWidth(leng);
+         noFill();
+         rect(ox-leng-10, oy-val/maxval*220-10,leng+5,20);
+         fill(0);
+         textAlign(CENTER,CENTER);
+         text(sea+" "+name, ox+si*(2*i+1)+si/2, oy+10);
+         text(val, ox-leng-10+(leng+5)/2, oy-val/maxval*220);
+         fill(this.colorL[i]);
+       }
+       else fill(0,0,0,70);
+       rect(ox+si*(2*i+1),oy,si,-val/maxval*220);
+     }
+   }
+
    draw(){
      this.drawline();
      this.drawbutton();
      this.drawInfo();
+     this.drawgraph();
    }
 }
 
