@@ -35,6 +35,7 @@ function logf1(){
     if(myID==""){
         console.log("fail");
         fill(0);
+        txtnum=1;
         txt1.show();
         txt1.position(930,5);
       }
@@ -117,6 +118,7 @@ function click6(){
         if(accessid==""){
             console.log("fail");
             fill(0);
+            txtnum=2;
             txt1.show();
             txt1.position(540 + 2*button1.width,100);
           }

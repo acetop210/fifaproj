@@ -61,7 +61,7 @@ function hideSearch(){
 }
 
 function draw0(){
-  txt1.hide();
+  if(txtnum==2) txt1.hide();
   image(img, 385,150,385*2,215*2+150);
 }
 

@@ -112,6 +112,15 @@ class dealTable{
    drawbutton(){
      buybtn.position(100, 190);
      sellbtn.position(150,190);
+
+     if(this.page==0){
+       buybtn.style('background-color',color(150,150,150));
+       sellbtn.style('background-color',color(255,255,255));
+     }
+     else{
+       buybtn.style('background-color',color(255,255,255));
+       sellbtn.style('background-color',color(150,150,150));
+     }
    }
 
    drawInfo(){

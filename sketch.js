@@ -11,6 +11,7 @@ let busername;
 let bmsel = '공식경기';
 let buybtn;
 let sellbtn;
+let txtnum=0;
 function setup() {
   textFont('Georgia');
   fillcolList = [color(255,0,0,96), color(0,255,0,96), color(0,0,255,96), color(225,0,128,96), color(0,64,64,96), color(64,0,64,96), color(128,128,0,96), color(0,255,55,96),color(255,0,255,96),color(128,0,64,96)];
